@@ -1,0 +1,16 @@
+CRITICAL - 2021-04-15 00:20:08 --> Undefined index: name
+#0 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Spotify.php(118): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ASUS\\D...', 118, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->logout()
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2021-04-15 00:36:57 --> syntax error, unexpected 'to' (T_STRING), expecting ';'
+#0 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Router\Router.php(170): CodeIgniter\Router\Router->autoRoute('spotify/logout')
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(816): CodeIgniter\Router\Router->handle('spotify/logout')
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(385): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
