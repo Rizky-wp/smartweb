@@ -6,20 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
 
     <title>Podnesia</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/e84730ea7c.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $('#btn-sidebar').on('click', function() {
-                $('#sidebar').toggleClass('visible');
-                $('#content').toggleClass('visible');
-            });
-        });
-    </script>
+
+
 </head>
 
 <body>
@@ -72,6 +66,7 @@
                         <span></span>
                         <span></span>
                     </div>
+                    <a type="button" class="btn btn-danger">Logout</a>
                 </div>
             </nav>
             <p style="font-size: 5em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi dolor assumenda eos reprehenderit cum quisquam consequatur maiores quae aut laboriosam alias rerum, ad itaque ex recusandae quasi autem! Doloremque.</p>
@@ -89,6 +84,16 @@
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#btn-sidebar').on('click', function() {
+                    $('#sidebar').toggleClass('visible');
+                    $('#content').toggleClass('visible');
+                });
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
