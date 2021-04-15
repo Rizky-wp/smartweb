@@ -66,7 +66,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <a type="button" class="btn btn-danger">Logout</a>
+                    <a href="<?php echo base_url('spotify/logout') ?>" type="button" class="btn btn-danger">Logout</a>
                 </div>
             </nav>
             <p style="font-size: 5em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi dolor assumenda eos reprehenderit cum quisquam consequatur maiores quae aut laboriosam alias rerum, ad itaque ex recusandae quasi autem! Doloremque.</p>

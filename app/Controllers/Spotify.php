@@ -33,7 +33,7 @@ class Spotify extends BaseController
         // $this->aksesToken();
 
         if (isset($this->session->name)) {
-            return redirect()->to('home');
+            return redirect()->to('/dashboard');
         }
         // echo $_SESSION['name'];
         else {
@@ -109,7 +109,15 @@ class Spotify extends BaseController
 
 
 
-        header('Location: ' . base_url('home'));
+        header('Location: ' . base_url('dashboard'));
         die();
+    }
+    public function logout()
+    {
+        $userModel = new UserModel();
+        $userModel->where('name', $_SESSION['name'])->delete();
+
+        $this->session->destroy();
+        return redirect()->to('/home');
     }
 }
