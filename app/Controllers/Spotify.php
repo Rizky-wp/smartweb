@@ -87,7 +87,6 @@ class Spotify extends BaseController
 
         $accessToken = $sessionSpotify->getAccessToken();
         $refreshToken = $sessionSpotify->getRefreshToken();
-
         $api = new SpotifyWebAPI\SpotifyWebAPI();
         // Fetch the saved access token from somewhere. A session for example.
         $api->setAccessToken($accessToken);
@@ -96,7 +95,13 @@ class Spotify extends BaseController
         $name1 = $userModel->where('name', $name)
             ->findAll();
 
-        if (isset($name1)) {
+        if ($name1) {
+            $userModel->where('name', $name)
+                ->set([
+                    'accToken' => $accessToken,
+                    'refreshToken' => $refreshToken,
+                ])
+                ->update();
             $_SESSION['name'] = $name;
         } else {
             $userModel->save([
@@ -104,8 +109,10 @@ class Spotify extends BaseController
                 'accToken' => $accessToken,
                 'refreshToken' => $refreshToken,
             ]);
+
             $_SESSION['name'] = $name;
         }
+
 
 
 
@@ -115,7 +122,12 @@ class Spotify extends BaseController
     public function logout()
     {
         $userModel = new UserModel();
-        $userModel->where('name', $_SESSION['name'])->delete();
+        $userModel->where('name', $_SESSION['name'])
+            ->set([
+                'accToken' => null,
+                'refreshToken' => null,
+            ])
+            ->update();
 
         $this->session->destroy();
         return redirect()->to('/home');

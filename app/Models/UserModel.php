@@ -7,17 +7,8 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'user';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'name';
     protected $allowedFields = [
         'name', 'accToken', 'refreshToken'
     ];
-
-    public function findById($id)
-    {
-        $data = $this->find($id);
-        if ($data) {
-            return $data;
-        }
-        return false;
-    }
 }
