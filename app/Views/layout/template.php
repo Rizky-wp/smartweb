@@ -12,7 +12,8 @@
     <title>Podnesia</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/e84730ea7c.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
 
 </head>
 
@@ -35,7 +36,7 @@
                             <a href="#"><i class="fas fa-home fa-lg" style="padding-right: 20px;"></i>HOME</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
+                            <a href="<?php echo base_url('dashboard/kategori'); ?>"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-info-circle fa-lg" style="padding-right: 20px;"></i>ABOUT</a>
@@ -47,7 +48,7 @@
 
                     <a href=""><i class="fab fa-instagram fa-2x" style="padding: 10px;"></i></a>
                     <a href=""><i class="fab fa-facebook fa-2x" style="padding: 10px;"></i></a>
-                    <a href=""><i class="fab fa-whatsapp fa-2x" style="padding: 10px;"></i></a>
+                    <a href=""><i class="fab fa-twitter fa-2x" style="padding: 10px;"></i></a>
 
                 </div>
             </div>
@@ -59,17 +60,16 @@
 
         <!-- Page Content Holder -->
         <div id="content" class="visible">
-            <nav class="navbar sticky-top navbar-light bg-light">
+            <nav class="navbar sticky-top navbar-light">
                 <div class="container-fluid">
                     <div id="btn-sidebar">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    <a href="<?php echo base_url('spotify/logout') ?>" type="button" class="btn btn-danger">Logout</a>
+                    <a href="<?php echo base_url('spotify/logout') ?>">Logout</a>
                 </div>
             </nav>
-            <p style="font-size: 5em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas modi dolor assumenda eos reprehenderit cum quisquam consequatur maiores quae aut laboriosam alias rerum, ad itaque ex recusandae quasi autem! Doloremque.</p>
             <?= $this->renderSection('content'); ?>
         </div>
 
