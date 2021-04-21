@@ -3,8 +3,6 @@
 
 namespace App\Controllers;
 
-
-
 use SpotifyWebAPI;
 use App\Models\UserModel;
 
@@ -84,10 +82,12 @@ class Spotify extends BaseController
 
         // Request a access token using the code from Spotify
         $sessionSpotify->requestAccessToken($_GET['code']);
-
+        $options = [
+            'auto_refresh' => true,
+        ];
+        $api = new SpotifyWebAPI\SpotifyWebAPI($options, $sessionSpotify);
         $accessToken = $sessionSpotify->getAccessToken();
         $refreshToken = $sessionSpotify->getRefreshToken();
-        $api = new SpotifyWebAPI\SpotifyWebAPI();
         // Fetch the saved access token from somewhere. A session for example.
         $api->setAccessToken($accessToken);
         $me = $api->me();
@@ -121,13 +121,13 @@ class Spotify extends BaseController
     }
     public function logout()
     {
-        $userModel = new UserModel();
-        $userModel->where('name', $_SESSION['name'])
-            ->set([
-                'accToken' => null,
-                'refreshToken' => null,
-            ])
-            ->update();
+        // $userModel = new UserModel();
+        // $userModel->where('name', $_SESSION['name'])
+        //     ->set([
+        //         'accToken' => null,
+        //         'refreshToken' => null,
+        //     ])
+        //     ->update();
 
         $this->session->destroy();
         return redirect()->to('/home');
