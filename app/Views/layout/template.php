@@ -24,7 +24,8 @@
             <div class="d-flex flex-column h-100">
                 <div class="sidebar-header mb-5">
                     <img src="/img/podnesia.png">
-                    <p class="text-center"><?= $name; ?></p>
+                    <p class="text-center">
+                        <?= $name; ?></p>
 
                 </div>
                 <div>
@@ -33,10 +34,10 @@
                 
                 </li> -->
                         <li>
-                            <a href="#"><i class="fas fa-home fa-lg" style="padding-right: 20px;"></i>HOME</a>
+                            <a href="/dashboard/home"><i class="fas fa-home fa-lg" style="padding-right: 20px;"></i>HOME</a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('dashboard/kategori'); ?>"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
+                            <a href="/dashboard/kategori"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-info-circle fa-lg" style="padding-right: 20px;"></i>ABOUT</a>

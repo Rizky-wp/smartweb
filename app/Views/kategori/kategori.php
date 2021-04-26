@@ -8,7 +8,7 @@
                 <div class="card">
                     <img src="/img/top.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <p class="card-text" style="text-align: center;">Top podcast</p>
+                        <p class="card-text" style="text-align: center;">Top</p>
                     </div>
                 </div>
             </a>

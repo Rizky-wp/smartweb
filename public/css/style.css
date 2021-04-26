@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
@@ -180,15 +180,15 @@ ul ul a {
 {
     margin-top: 0px;
     border-radius: 10px;
-    background-color: #292824;
+    background-color: #201e1e;
     margin-bottom: 15px;
     
 }
 
 .card p
 {
-    color: white;
-    font-family: roboto slab;
+    color: rgb(199, 199, 199);
+    font-family: 'Poppins', sans-serif;
     margin-top: 0px;
 }
 
@@ -199,8 +199,7 @@ a
 
 .card img
 {
-    width: 90%;
-    margin: auto;
+    width: 100%;
 }
 
 .kartu .col .card:hover
