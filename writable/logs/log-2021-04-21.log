@@ -1,0 +1,72 @@
+ERROR - 2021-04-21 02:55:05 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2021-04-21 02:55:05 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Database\BaseConnection.php(618): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\BaseModel.php(583): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(96): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#7 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-04-21 02:55:13 --> Invalid authorization code
+#0 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(263): SpotifyWebAPI\Request->parseBody(Object(stdClass), 400)
+#1 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(116): SpotifyWebAPI\Request->send('POST', 'https://account...', 'client_id=d1abe...', Array)
+#2 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Session.php(248): SpotifyWebAPI\Request->account('POST', '/api/token', Array, Array)
+#3 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(84): SpotifyWebAPI\Session->requestAccessToken('AQCPiA5u1NXm3RM...')
+#4 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-04-21 02:55:15 --> Invalid authorization code
+#0 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(263): SpotifyWebAPI\Request->parseBody(Object(stdClass), 400)
+#1 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(116): SpotifyWebAPI\Request->send('POST', 'https://account...', 'client_id=d1abe...', Array)
+#2 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Session.php(248): SpotifyWebAPI\Request->account('POST', '/api/token', Array, Array)
+#3 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(84): SpotifyWebAPI\Session->requestAccessToken('AQCPiA5u1NXm3RM...')
+#4 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2021-04-21 08:23:50 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2021-04-21 08:23:50 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Database\BaseConnection.php(618): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\BaseModel.php(583): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(96): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#7 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-04-21 08:24:18 --> Invalid authorization code
+#0 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(263): SpotifyWebAPI\Request->parseBody(Object(stdClass), 400)
+#1 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(116): SpotifyWebAPI\Request->send('POST', 'https://account...', 'client_id=d1abe...', Array)
+#2 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Session.php(248): SpotifyWebAPI\Request->account('POST', '/api/token', Array, Array)
+#3 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(84): SpotifyWebAPI\Session->requestAccessToken('AQCLkOUyhaRp8MS...')
+#4 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-04-21 08:24:20 --> Invalid authorization code
+#0 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(263): SpotifyWebAPI\Request->parseBody(Object(stdClass), 400)
+#1 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Request.php(116): SpotifyWebAPI\Request->send('POST', 'https://account...', 'client_id=d1abe...', Array)
+#2 C:\xampp\htdocs\smartweb\vendor\jwilsson\spotify-web-api-php\src\Session.php(248): SpotifyWebAPI\Request->account('POST', '/api/token', Array, Array)
+#3 C:\xampp\htdocs\smartweb\app\Controllers\Spotify.php(84): SpotifyWebAPI\Session->requestAccessToken('AQCLkOUyhaRp8MS...')
+#4 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Spotify->callback()
+#5 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Spotify))
+#6 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
