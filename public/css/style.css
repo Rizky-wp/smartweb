@@ -199,8 +199,7 @@ a
 
 .card img
 {
-    width: 90%;
-    margin: auto;
+    width: 100%;
 }
 
 .kartu .col .card:hover
