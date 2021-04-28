@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\KategoriModel;
+
 class Kategori extends BaseController
 {
     protected $session;
@@ -15,8 +17,11 @@ class Kategori extends BaseController
     }
     public function index()
     {
+        $kategorimodel = new KategoriModel();
+        $kategori = $kategorimodel->findAll();
         $data = [
             'name' => $this->session->name,
+            'kategori' => $kategori,
         ];
         return view('kategori/kategori', $data);
     }
