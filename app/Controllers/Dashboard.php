@@ -34,4 +34,9 @@ class Dashboard extends BaseController
         ];
         return view('home/home', $data);
     }
+
+    public function login()
+    {
+        return view('login/login');
+    }
 }
