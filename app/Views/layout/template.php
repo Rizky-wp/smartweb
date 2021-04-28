@@ -34,10 +34,10 @@
                 
                 </li> -->
                         <li>
-                            <a href="/dashboard/home"><i class="fas fa-home fa-lg" style="padding-right: 20px;"></i>HOME</a>
+                            <a href="/home"><i class="fas fa-home fa-lg" style="padding-right: 20px;"></i>HOME</a>
                         </li>
                         <li>
-                            <a href="/dashboard/kategori"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
+                            <a href="/kategori"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
                         </li>
                         <li>
                             <a href="#"><i class="fas fa-info-circle fa-lg" style="padding-right: 20px;"></i>ABOUT</a>
@@ -68,7 +68,7 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <a href="<?php echo base_url('spotify/logout') ?>">Logout</a>
+                    <a href="<?php echo base_url('login/logout') ?>">Logout</a>
                 </div>
             </nav>
             <?= $this->renderSection('content'); ?>

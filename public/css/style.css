@@ -31,7 +31,7 @@ a:focus {
 #sidebar {
     scrollbar-width: thin;
     scrollbar-color: rgb(26, 26, 26) rgba(255, 255, 255, 0);
-  }
+}
   
   /* Works on Chrome, Edge, and Safari */
   #sidebar::-webkit-scrollbar {
@@ -182,7 +182,7 @@ ul ul a {
     border-radius: 10px;
     background-color: #201e1e;
     margin-bottom: 15px;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
 }
 
 .card p

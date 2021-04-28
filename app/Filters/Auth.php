@@ -13,7 +13,7 @@ class Auth implements FilterInterface
         // Do something here
         $session = session();
         if (!$session->get('name')) {
-            return redirect()->to('/spotify');
+            return redirect()->to('/login');
         }
     }
 

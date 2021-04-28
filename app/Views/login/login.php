@@ -14,7 +14,7 @@
 
 <body>
     <div class="d-flex align-items-center justify-content-center h-100">
-        <div class="container kotak">
+        <div class="container kotak shadow-lg">
             <div class="row row-cols-1 ">
                 <div class="col img">
                 </div>
@@ -25,7 +25,7 @@
                     <H3>To access Podnesia, Please login with your Spotify Account</H3>
                 </div>
                 <div class="col text-center mt-4">
-                    <a href="#" class="btn btn-primary"> Login with Spotify </a>
+                    <a href="/login/spotify" class="btn btn-primary shadow"> Login with Spotify </a>
                 </div>
             </div>
         </div>
