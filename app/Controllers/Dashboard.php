@@ -18,15 +18,9 @@ class Dashboard extends BaseController
         $data = [
             'name' => $this->session->name,
         ];
-        return view('dashboard/dashboard', $data);
+        return view('home/home', $data);
     }
-    public function kategori()
-    {
-        $data = [
-            'name' => $this->session->name,
-        ];
-        return view('kategori/kategori', $data);
-    }
+
     public function home()
     {
         $data = [

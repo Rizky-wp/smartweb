@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use CodeIgniter\HTTP\Request;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
@@ -27,8 +28,15 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
+
 	protected $helpers = [];
 
+	/**
+	 * Instance of the main Request object.
+	 *
+	 * @var HTTP\IncomingRequest
+	 */
+	protected $request;
 	/**
 	 * Constructor.
 	 *
@@ -46,4 +54,7 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
 	}
+	protected $clientId = "d1abeb7409464d2c8997aa5ae020237d";
+	protected $clientSec = "cd94ee10c1354f14bc1e80b6c1bb1177";
+	protected $redirectUri = "http://localhost:8081/login/callback";
 }

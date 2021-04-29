@@ -134,7 +134,7 @@ a[aria-expanded="true"] {
 
 
 
-ul ul a {
+#sidebar ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
     background: #6d7fcc;
@@ -173,9 +173,7 @@ ul ul a {
 
 
 /* Kategori */
-.kartu .col{
-    width: 12rem;
-}
+
 .card
 {
     margin-top: 0px;

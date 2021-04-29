@@ -11,9 +11,7 @@ class Login extends BaseController
 {
 
 
-    private $clientId = "d1abeb7409464d2c8997aa5ae020237d";
-    private $clientSec = "cd94ee10c1354f14bc1e80b6c1bb1177";
-    private $redirectUri = "http://localhost:8081/login/callback";
+
     protected $session;
 
 
