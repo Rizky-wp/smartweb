@@ -28,4 +28,11 @@ class Dashboard extends BaseController
         ];
         return view('home/home', $data);
     }
+    public function episode()
+    {
+        $data = [
+            'name' => $this->session->name,
+        ];
+        return view('search/episode', $data);
+    }
 }

@@ -1,0 +1,20 @@
+
+.bg
+{
+    background-color: #fa9905;
+    background-image: linear-gradient(#fa9905,#333333);
+}
+.cover img
+{
+width: 50%;
+margin-left: 0px;
+}
+.bg2
+{
+    background-color: #333333;
+    color: white;
+}
+.episode a{
+    background-color: #333333;
+    color: white;
+}
