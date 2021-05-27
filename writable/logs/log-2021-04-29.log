@@ -10,3 +10,11 @@ CRITICAL - 2021-04-29 00:08:14 --> Undefined property: stdClass::$items
 #8 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
 #10 {main}
+CRITICAL - 2021-04-29 20:55:28 --> Undefined index: accToken
+#0 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Search.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ASUS\\D...', 32, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Search->index()
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Search))
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
