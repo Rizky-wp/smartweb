@@ -32,6 +32,7 @@ class Search extends BaseController
         $session->setAccessToken($user['accToken']);
         $session->setRefreshToken($user['refreshToken']);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
+        $api->setSession($session);
         $data_search = $api->search($search, 'show', ['limit' => 10]);
 
         #dd($data_search);
@@ -65,7 +66,7 @@ class Search extends BaseController
         $session->setAccessToken($user['accToken']);
         $session->setRefreshToken($user['refreshToken']);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
-
+        $api->setSession($session);
         $data_pod = $api->getShow($search);
         #dd($data_pod);
         $data = [
