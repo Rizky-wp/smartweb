@@ -28,7 +28,9 @@ class Search extends BaseController
             'auto_refresh' => true,
         ];
 
-        $user = $userModel->find($this->session->name);
+        $user = $userModel->where('name', $this->session->name)
+            ->first();
+        #dd($user);
         $session->setAccessToken($user['accToken']);
         $session->setRefreshToken($user['refreshToken']);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
@@ -62,7 +64,8 @@ class Search extends BaseController
         $options = [
             'auto_refresh' => true,
         ];
-        $user = $userModel->find($this->session->name);
+        $user = $user = $userModel->where('name', $this->session->name)
+            ->first();
         $session->setAccessToken($user['accToken']);
         $session->setRefreshToken($user['refreshToken']);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);

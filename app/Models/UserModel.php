@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $table = 'user';
-    protected $primaryKey = 'name';
+    protected $primaryKey = 'id';
     protected $allowedFields = [
         'name', 'accToken', 'refreshToken'
     ];

@@ -29,10 +29,12 @@ class Login extends BaseController
         // $this->aksesToken();
 
         if (isset($this->session->name)) {
+
             return redirect()->to('/dashboard');
         }
         // echo $_SESSION['name'];
         else {
+
             return $this->login();
         }
     }
@@ -100,7 +102,6 @@ class Login extends BaseController
         $name = $me->display_name;
         $name1 = $userModel->where('name', $name)
             ->findAll();
-
         if ($name1) {
             $userModel->where('name', $name)
                 ->set([
@@ -109,21 +110,19 @@ class Login extends BaseController
                 ])
                 ->update();
             $_SESSION['name'] = $name;
+            header('Location: ' . base_url('dashboard'));
+            die();
         } else {
             $userModel->save([
-                'name' => $name,
+                'name' => "Rangkuti",
                 'accToken' => $accessToken,
                 'refreshToken' => $refreshToken,
             ]);
 
             $_SESSION['name'] = $name;
+            header('Location: ' . base_url('dashboard'));
+            die();
         }
-
-
-
-
-        header('Location: ' . base_url('dashboard'));
-        die();
     }
     public function logout()
     {
