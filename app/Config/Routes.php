@@ -36,6 +36,7 @@ $routes->resource('kontak');
 $routes->add('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('/home', 'Dashboard::home', ['filter' => 'auth']);
 $routes->get('/search', 'Search::index', ['filter' => 'auth']);
+$routes->get('/podcast/(:any)', 'Search::search/$1', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

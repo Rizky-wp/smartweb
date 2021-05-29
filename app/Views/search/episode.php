@@ -1,4 +1,7 @@
 <?= $this->extend('layout/template'); ?>
+<?= $this->section('js'); ?>
+<script src="/js/main.js"></script>
+<?= $this->endSection('js'); ?>
 <?= $this->section('content'); ?>
 <div class=" d-flex justify-content-between bg">
     <div class=" d-flex flex-row">
@@ -21,9 +24,14 @@
     </div>
 
 </div>
-<?php foreach ($data_search->episodes->items as $episodes) : ?>
+<input type="hidden" id="id_pod" value="<?= $data_search->id; ?>"></input>
+<input type="hidden" id="page" value="<?= $page; ?>"></input>
+<?php foreach ($data_episode->items as $episodes) : ?>
     <div class="list-group episode">
         <a href="#" class="list-group-item list-group-item-action"><?= $episodes->name; ?></a>
     </div>
 <?php endforeach; ?>
+<div id="tambah" class="">
+    <button class="button" id="load_button" onclick="load_click()">load more</button>
+</div>
 <?= $this->endSection(); ?>
