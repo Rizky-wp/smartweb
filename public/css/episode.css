@@ -1,20 +1,50 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 .bg
 {
-    background-color: #fa9905;
-    background-image: linear-gradient(#fa9905,#333333);
+    background-color: #ff8303;
+    background-image: linear-gradient(#fb743e,#343f56);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* margin-left: 100px; */
 }
 .cover img
 {
 width: 50%;
 margin-left: 0px;
 }
-.bg2
-{
-    background-color: #333333;
-    color: white;
-}
+
 .episode a{
     background-color: #333333;
     color: white;
+}
+.episode
+{
+    margin-bottom: 7px;
+}
+img
+{
+    width: 75px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+h2
+{
+    border-bottom: 2px solid white;
+    font-family: 'Anton', sans-serif;
+    color: white;
+}
+h3
+{
+    font-family: 'Anton', sans-serif;
+}
+h1
+{
+    font-family: 'Anton', sans-serif;
+}
+.btn :hover
+{
+    color: #292824;
+    background: #fff;
+    margin-top: 5px;
 }
