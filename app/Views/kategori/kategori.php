@@ -5,7 +5,7 @@
     <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 justify-content-around w-100">
         <?php foreach ($kategori as $data_kat) : ?>
             <div class="col mb-5">
-                <a href="#">
+                <a href="<?= base_url('dashboard/kategori/' . $data_kat['nama_kategori']); ?>">
                     <div class="card h-100">
                         <img src="<?= $data_kat['gambar']; ?>" class="card-img-top" alt="...">
                         <div class="card-body d-flex justify-content-center align-items-center">
