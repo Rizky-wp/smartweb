@@ -14,7 +14,7 @@
                 <h3><?= $data_search->publisher; ?></h3>
             </div>
             <div class="p-3 bd-highlight">
-                <h4> Deskripsi </h4>
+                <h4> <?= $data_search->description; ?> </h4>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
     <?php foreach ($data_episode->items as $episodes) : ?>
         <div class="list-group episode">
             <a href="#" class="list-group-item list-group-item-action">
-                <img src="/img/arts.png" alt=""><?= $episodes->name; ?></a>
+                <img src="<?= $episodes->images[1]->url; ?>" alt=""><?= $episodes->name; ?></a>
         </div>
     <?php endforeach; ?>
     <div id="tambah" class="">
