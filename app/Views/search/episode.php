@@ -25,12 +25,12 @@
     <input type="hidden" id="page" value="<?= $page; ?>"></input>
     <?php foreach ($data_episode->items as $episodes) : ?>
         <div class="list-group episode">
-            <a href="#" class="list-group-item list-group-item-action">
+            <a href="<?= base_url('search/episode/' . $episodes->id); ?>" class="list-group-item list-group-item-action">
                 <img src="<?= $episodes->images[1]->url; ?>" alt=""><?= $episodes->name; ?></a>
         </div>
     <?php endforeach; ?>
-    <div id="tambah" class="">
-        <button type="button" class="btn btn-secondary" onclick="load_click()">Secondary</button>
+    <div id="tambah" class="my-4">
+        <button type="button " class="btn btn-secondary" onclick="load_click()">Show More</button>
     </div>
     <?= $this->endSection(); ?>
 </div>

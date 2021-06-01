@@ -16,7 +16,7 @@ function load_click(){
                 // console.log(data.data)
                 data.data.items.map(episode => {
                     html+='<div class="list-group episode">'
-                    html+='<a href="#" class="list-group-item list-group-item-action"><img src="'+episode.images[1].url+'" alt="">'+episode.name+'</a>'
+                    html+='<a href="'+site_url+'/search/episode/'+episode.id+'" class="list-group-item list-group-item-action"><img src="'+episode.images[1].url+'" alt="">'+episode.name+'</a>'
                     html+='</div>'
                 })
                 $('#tambah').before(html)

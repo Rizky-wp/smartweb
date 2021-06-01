@@ -2,7 +2,8 @@
 
 <?= $this->section('content'); ?>
 <div class="container-fluid mt-5">
-    <img src="/img/arts.png" class="rounded mx-auto d-block player-cover" alt="...">
+    <img src="<?= $data_episode->images[0]->url; ?>" class="rounded mx-auto d-block player-cover" alt="...">
+    <iframe src="https://open.spotify.com/embed/episode/<?= $data_episode->id; ?>" width="100%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 </div>
 <div class="container-fluid">
     <div class="row">

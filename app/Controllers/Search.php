@@ -138,4 +138,38 @@ class Search extends BaseController
             'data' => $data_episode,
         ]);
     }
+    public function episode($episode)
+    {
+        $episodeId = $episode;
+        $userModel = new UserModel();
+        $session = new SpotifyWebAPI\Session(
+            $this->clientId,
+            $this->clientSec,
+        );
+        $options = [
+            'auto_refresh' => true,
+        ];
+        $user = $user = $userModel->where('name', $this->session->name)
+            ->first();
+        $session->setAccessToken($user['accToken']);
+        $session->setRefreshToken($user['refreshToken']);
+        $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
+        $api->setSession($session);
+        $newAccessToken = $session->getAccessToken();
+        $newRefreshToken = $session->getRefreshToken();
+        $userModel->where('name', $this->session->name)
+            ->set([
+                'accToken' => $newAccessToken,
+                'refreshToken' => $newRefreshToken,
+            ])
+            ->update();
+
+        $data_episode = $api->getEpisode($episodeId);
+        // dd($data_episode);
+        $data = [
+            'name' => $this->session->name,
+            'data_episode' => $data_episode,
+        ];
+        return view('comment/comment', $data);
+    }
 }
