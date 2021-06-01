@@ -37,6 +37,15 @@ class Dashboard extends BaseController
         ];
         return view('search/episode', $data);
     }
+
+    public function comment()
+    {
+        $data = [
+            'name' => $this->session->name,
+        ];
+        return view('comment/comment', $data);
+    }
+
     public function kategori($kategori)
     {
         $kategoriModel = new KategoriModel();
