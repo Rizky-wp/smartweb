@@ -229,9 +229,27 @@ img
     background-position: center;
     
 }
+/* PLAYER AND COMMENT */
 .player-cover
 {
-    width: 400px;
+    width: 350px;
+}
+.player
+{
+    margin-top: 15px;
+}
+.comment
+{
+    background-color: blue;
+}
+.card
+{
+    color: black;
+    background-color: white;
+}
+.btncomment
+{
+    margin-left: 92%;
 }
 /* ---------------------------------------------------
     MEDIAQUERIES
