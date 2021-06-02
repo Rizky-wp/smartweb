@@ -12,7 +12,7 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary btncomment mt-2">Submit</button>
-    <div class="card mt-3">
+    <div class="card-comment mt-3">
         <div class="card-header">
             Nickname
         </div>
