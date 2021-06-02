@@ -16,13 +16,8 @@
             <input type="comment" class="form-control mt-2  " id="comment">
         </div>
     </div>
-<<<<<<< HEAD
-    <button type="submit" class="btn btn-primary btncomment mt-2">Submit</button>
-    <div class="card-comment mt-3">
-=======
     <button type="submit" class="btn btn-primary btncomment mt-2" onclick="load_click()">Submit</button>
-    <div class=" card mt-3">
->>>>>>> 2953a523d47fb32229033fbd93b691ed7891478c
+    <div class=" card-comment mt-3">
         <div class="card-header">
             Nickname
         </div>
