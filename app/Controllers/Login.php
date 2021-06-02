@@ -99,27 +99,27 @@ class Login extends BaseController
         // Fetch the saved access token from somewhere. A session for example.
         $api->setAccessToken($accessToken);
         $me = $api->me();
-        $name = $me->display_name;
-        $name1 = $userModel->where('name', $name)
-            ->findAll();
-        if ($name1) {
-            $userModel->where('name', $name)
-                ->set([
-                    'accToken' => $accessToken,
-                    'refreshToken' => $refreshToken,
-                ])
-                ->update();
-            $_SESSION['name'] = $name;
-            header('Location: ' . base_url('dashboard'));
-            die();
-        } else {
-            $userModel->save([
-                'name' => "Rangkuti",
+        $id = $me->id;
+        $id1 = $userModel->find($id);
+        if ($id1) {
+            $userModel->update($id, [
+                'name' => $me->display_name,
                 'accToken' => $accessToken,
                 'refreshToken' => $refreshToken,
             ]);
 
-            $_SESSION['name'] = $name;
+            $_SESSION['name'] = $me->display_name;
+            header('Location: ' . base_url('dashboard'));
+            die();
+        } else {
+            $userModel->insert([
+                'id'    => $id,
+                'name' => $me->display_name,
+                'accToken' => $accessToken,
+                'refreshToken' => $refreshToken,
+            ]);
+            $_SESSION['id'] = $me->id;
+            $_SESSION['name'] = $me->display_name;
             header('Location: ' . base_url('dashboard'));
             die();
         }

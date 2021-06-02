@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use SpotifyWebAPI;
 use App\Models\UserModel;
+use App\Models\CommentModel;
+use App\Models\PodcastModel;
 
 class Search extends BaseController
 {
@@ -28,28 +30,25 @@ class Search extends BaseController
             'auto_refresh' => true,
         ];
 
-        $user = $userModel->where('name', $this->session->name)
-            ->first();
+        $user = $userModel->asObject()->find($this->session->id);
         #dd($user);
-        $session->setAccessToken($user['accToken']);
-        $session->setRefreshToken($user['refreshToken']);
+        $session->setAccessToken($user[0]->accToken);
+        $session->setRefreshToken($user[0]->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
         $api->setSession($session);
         $data_search = $api->search($search, 'show', ['limit' => 10]);
-
-        #dd($data_search);
+        // $me = $api->me();
+        // dd($me);
         $data = [
             'name' => $this->session->name,
             'data_search' => $data_search,
         ];
         $newAccessToken = $session->getAccessToken();
         $newRefreshToken = $session->getRefreshToken();
-        $userModel->where('name', $this->session->name)
-            ->set([
-                'accToken' => $newAccessToken,
-                'refreshToken' => $newRefreshToken,
-            ])
-            ->update();
+        $userModel->update($this->session->id, [
+            'accToken' => $newAccessToken,
+            'refreshToken' => $newRefreshToken,
+        ]);
         return view('search/search', $data);
     }
     public function search($pod_id)
@@ -64,12 +63,10 @@ class Search extends BaseController
         $options = [
             'auto_refresh' => true,
         ];
-        $user = $user = $userModel->where('name', $this->session->name)
-            ->first();
-        $session->setAccessToken($user['accToken']);
-        $session->setRefreshToken($user['refreshToken']);
+        $user  = $userModel->asObject()->find($this->session->id);
+        $session->setAccessToken($user[0]->accToken);
+        $session->setRefreshToken($user[0]->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
-        $api->setSession($session);
 
         $page = 1;
         $limit = 10;
@@ -80,7 +77,7 @@ class Search extends BaseController
             'limit' => $limit,
         ]);
 
-        #dd($data_pod);
+        // dd($data_pod);
         $data = [
             'name' => $this->session->name,
             'data_search' => $data_pod,
@@ -90,12 +87,10 @@ class Search extends BaseController
         #dd($data_pod);
         $newAccessToken = $session->getAccessToken();
         $newRefreshToken = $session->getRefreshToken();
-        $userModel->where('name', $this->session->name)
-            ->set([
-                'accToken' => $newAccessToken,
-                'refreshToken' => $newRefreshToken,
-            ])
-            ->update();
+        $userModel->update($this->session->id, [
+            'accToken' => $newAccessToken,
+            'refreshToken' => $newRefreshToken,
+        ]);
         return view('search/episode', $data);
     }
     public function get()
@@ -115,20 +110,17 @@ class Search extends BaseController
         $options = [
             'auto_refresh' => true,
         ];
-        $user = $user = $userModel->where('name', $this->session->name)
-            ->first();
-        $session->setAccessToken($user['accToken']);
-        $session->setRefreshToken($user['refreshToken']);
+        $user = $userModel->asObject()->find($this->session->id);
+        $session->setAccessToken($user[0]->accToken);
+        $session->setRefreshToken($user[0]->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
-        $api->setSession($session);
+
         $newAccessToken = $session->getAccessToken();
         $newRefreshToken = $session->getRefreshToken();
-        $userModel->where('name', $this->session->name)
-            ->set([
-                'accToken' => $newAccessToken,
-                'refreshToken' => $newRefreshToken,
-            ])
-            ->update();
+        $userModel->update($this->session->id, [
+            'accToken' => $newAccessToken,
+            'refreshToken' => $newRefreshToken,
+        ]);
         $data_episode = $api->getShowEpisodes($id_pod, [
             'offset' => $offset,
             'limit' => $limit,
@@ -149,27 +141,99 @@ class Search extends BaseController
         $options = [
             'auto_refresh' => true,
         ];
-        $user = $user = $userModel->where('name', $this->session->name)
-            ->first();
-        $session->setAccessToken($user['accToken']);
-        $session->setRefreshToken($user['refreshToken']);
+        $user = $userModel->asObject()->find($this->session->id);
+        // dd($user);
+        $session->setAccessToken($user[0]->accToken);
+        $session->setRefreshToken($user[0]->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
-        $api->setSession($session);
+
         $newAccessToken = $session->getAccessToken();
         $newRefreshToken = $session->getRefreshToken();
-        $userModel->where('name', $this->session->name)
-            ->set([
-                'accToken' => $newAccessToken,
-                'refreshToken' => $newRefreshToken,
-            ])
-            ->update();
-
+        $userModel->update($this->session->id, [
+            'accToken' => $newAccessToken,
+            'refreshToken' => $newRefreshToken,
+        ]);
+        $me = $api->me();
         $data_episode = $api->getEpisode($episodeId);
-        // dd($data_episode);
         $data = [
             'name' => $this->session->name,
             'data_episode' => $data_episode,
+            'me' => $me,
         ];
         return view('comment/comment', $data);
+    }
+    public function save()
+    {
+        $userModel = new UserModel();
+        $commentmodel = new CommentModel();
+        $podcastmodel = new PodcastModel();
+        $id_user = $this->request->getVar('id_user');
+        $id_pod = $this->request->getVar('id_pod');
+        $id_episode = $this->request->getVar('id_episode');
+        $isi = $this->request->getVar('isi');
+
+        $podcast = $podcastmodel->find($id_pod);
+        if ($isi) {
+            if ($podcast) {
+                $save = $commentmodel->save([
+                    'id_user' => $id_user,
+                    'id_pod' => $id_pod,
+                    'id_episode' => $id_episode,
+                    'isi' => $isi,
+                ]);
+                if ($save) {
+                    $response = "oke";
+                    echo json_encode(['data' => $response]);
+                } else {
+                    $response = "gagal";
+                    echo json_encode(['data' => $response]);
+                }
+            } else {
+                $session = new SpotifyWebAPI\Session(
+                    $this->clientId,
+                    $this->clientSec,
+                );
+                $options = [
+                    'auto_refresh' => true,
+                ];
+                $user = $userModel->asObject()->find($this->session->id);
+                $session->setAccessToken($user[0]->accToken);
+                $session->setRefreshToken($user[0]->refreshToken);
+                $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
+
+                $newAccessToken = $session->getAccessToken();
+                $newRefreshToken = $session->getRefreshToken();
+                $userModel->update($this->session->id, [
+                    'accToken' => $newAccessToken,
+                    'refreshToken' => $newRefreshToken,
+                ]);
+                $data_pod = $api->getShow($id_pod);
+                $name_pod = $data_pod->name;
+                $url = $data_pod->images[1]->url;
+                $insert = $podcastmodel->insert([
+                    'id_pod' => $id_pod,
+                    'name_podcast' => $name_pod,
+                    'url' => $url,
+                ]);
+                if ($insert) {
+                    $save = $commentmodel->save([
+                        'id_user' => $id_user,
+                        'id_pod' => $id_pod,
+                        'id_episode' => $id_episode,
+                        'isi' => $isi,
+                    ]);
+                    if ($save) {
+                        $response = "oke";
+                        echo json_encode(['data' => $response]);
+                    } else {
+                        $response = "gagal";
+                        echo json_encode(['data' => $response]);
+                    }
+                }
+            }
+        } else {
+            $response = "gagal";
+            echo json_encode(['data' => $response]);
+        }
     }
 }
