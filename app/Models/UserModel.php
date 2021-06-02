@@ -8,7 +8,6 @@ class UserModel extends Model
 {
     protected $table = 'user';
     protected $primaryKey = 'id';
-    protected $allowedFields = [
-        'name', 'accToken', 'refreshToken'
-    ];
+    protected $useAutoIncrement = false;
+    protected $allowedFields = ['id', 'name', 'accToken', 'refreshToken'];
 }
