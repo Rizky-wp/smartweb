@@ -132,6 +132,7 @@ class Search extends BaseController
     }
     public function episode($episode)
     {
+        $page = 0;
         $episodeId = $episode;
         $userModel = new UserModel();
         $session = new SpotifyWebAPI\Session(
@@ -159,6 +160,7 @@ class Search extends BaseController
             'name' => $this->session->name,
             'data_episode' => $data_episode,
             'me' => $me,
+            'page' => $page,
         ];
         return view('comment/comment', $data);
     }
@@ -235,5 +237,19 @@ class Search extends BaseController
             $response = "gagal";
             echo json_encode(['data' => $response]);
         }
+    }
+    public function getkomen()
+    {
+        $commentmodel = new CommentModel();
+        $page = $this->request->getVar('page');
+        $id_episode = $this->request->getVar('id_episode');
+        $page = $page + 1;
+        $limit = 5;
+        $offset = ($page - 1) * $limit;
+        $data = $commentmodel->komen($id_episode, $offset);
+        echo json_encode([
+            'page' => $page,
+            'data' => $data,
+        ]);
     }
 }

@@ -9,7 +9,7 @@ function load_click(){
                 id_pod : id_pod
             }, //last_id kita berarti 15
             success: function(data){
-                // $(".episode").append(data);
+                
                 data = JSON.parse(data)
                 $('#page').val(data.page)
                 let html = ''
@@ -31,3 +31,4 @@ function load_click(){
             }
           });
     }
+

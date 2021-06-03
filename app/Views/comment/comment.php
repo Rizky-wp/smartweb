@@ -16,7 +16,7 @@
             <input type="comment" class="form-control mt-2  " id="comment">
         </div>
     </div>
-    <button type="submit" class="btn btn-primary btncomment mt-2" onclick="load_click()">Submit</button>
+    <button type="submit" class="btn btn-primary btncomment mt-2" onclick="submit_click()">Submit</button>
     <div class=" card-comment mt-3">
         <div class="card-header">
             Nickname
@@ -24,6 +24,10 @@
         <div class="card-body">
             <h4>ISI COMMENT</h4>
         </div>
+    </div>
+    <div id="tambah" class="mt-2">
+        <input type="hidden" id="page" value="<?= $page; ?>">
+        <button type="button " id="komen" class="btn btn-secondary" onclick="load_click()">Load Comment</button>
     </div>
 </div>
 
