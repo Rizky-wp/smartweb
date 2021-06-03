@@ -77,7 +77,7 @@ class Search extends BaseController
             'limit' => $limit,
         ]);
 
-        // dd($data_pod);
+        // dd($data_episode);
         $data = [
             'name' => $this->session->name,
             'data_search' => $data_pod,

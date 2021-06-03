@@ -349,3 +349,52 @@ CRITICAL - 2021-06-02 10:13:41 --> Cannot use object of type stdClass as array
 #3 C:\xampp\htdocs\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2021-06-02 23:02:38 --> Undefined variable: episode
+#0 C:\Users\ASUS\Desktop\smartweb\app\Views\search\episode.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ASUS\\D...', 40, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(220): include('C:\\Users\\ASUS\\D...')
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('search/episode', Array, true)
+#4 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Search.php(94): view('search/episode', Array)
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Search->search('0I1Z9MNa7cIjpDu...')
+#6 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Search))
+#7 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#10 {main}
+CRITICAL - 2021-06-02 23:03:10 --> Undefined variable: episode
+#0 C:\Users\ASUS\Desktop\smartweb\app\Views\search\episode.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ASUS\\D...', 40, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(220): include('C:\\Users\\ASUS\\D...')
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('search/episode', Array, true)
+#4 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Search.php(94): view('search/episode', Array)
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Search->search('0I1Z9MNa7cIjpDu...')
+#6 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Search))
+#7 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#10 {main}
+CRITICAL - 2021-06-02 23:19:44 --> Undefined variable: episode
+#0 C:\Users\ASUS\Desktop\smartweb\app\Views\search\episode.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ASUS\\D...', 40, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(220): include('C:\\Users\\ASUS\\D...')
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('search/episode', Array, true)
+#4 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Search.php(94): view('search/episode', Array)
+#5 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Search->search('0I1Z9MNa7cIjpDu...')
+#6 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Search))
+#7 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#10 {main}
+CRITICAL - 2021-06-02 23:37:18 --> date_format() expects parameter 1 to be DateTimeInterface, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'date_format() e...', 'C:\\Users\\ASUS\\D...', 39, Array)
+#1 C:\Users\ASUS\Desktop\smartweb\app\Views\search\episode.php(39): date_format('2021-06-02', 'F/d')
+#2 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(220): include('C:\\Users\\ASUS\\D...')
+#3 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('search/episode', Array, true)
+#5 C:\Users\ASUS\Desktop\smartweb\app\Controllers\Search.php(94): view('search/episode', Array)
+#6 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\Search->search('0I1Z9MNa7cIjpDu...')
+#7 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Search))
+#8 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ASUS\Desktop\smartweb\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ASUS\Desktop\smartweb\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\Users\\ASUS\\D...')
+#11 {main}

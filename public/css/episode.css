@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .bg
 {
     background-color: #ff8303;
@@ -26,7 +27,7 @@ box-shadow: 10px 10px 5px #333333;
 img
 {
     width: 75px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     border-radius: 5px;
 }
 h2
@@ -55,4 +56,12 @@ h1
     color: #292824;
     background: #fff;
     margin-top: 5px;
+}
+.deskripsi{
+    font-family: 'Poppins', sans-serif;
+    font-size: 75%;
+    color: rgb(155, 155, 155);
+}
+.name{
+    font-size: 125%;
 }
