@@ -58,4 +58,11 @@ class Dashboard extends BaseController
         ];
         return view('kategori/isi', $data);
     }
+    public function about()
+    {
+        $data = [
+            'name' => $this->session->name,
+        ];
+        return view('about/about', $data);
+    }
 }

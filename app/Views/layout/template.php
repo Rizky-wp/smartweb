@@ -45,22 +45,19 @@
                             <a href="/kategori"><i class="fas fa-podcast fa-lg" style="padding-right: 20px;"></i>PODCAST</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fas fa-info-circle fa-lg" style="padding-right: 20px;"></i>ABOUT</a>
+                            <a href="/about"><i class="fas fa-info-circle fa-lg" style="padding-right: 20px;"></i>ABOUT</a>
                         </li>
                     </ul>
                 </div>
 
                 <div class="d-flex justify-content-center mt-auto align-items-center">
 
-                    <a href=""><i class="fab fa-instagram fa-2x" style="padding: 10px;"></i></a>
+                    <a href="https://www.instagram.com/podnesia21/"><i class="fab fa-instagram fa-2x" style="padding: 10px;"></i></a>
                     <a href=""><i class="fab fa-facebook fa-2x" style="padding: 10px;"></i></a>
-                    <a href=""><i class="fab fa-twitter fa-2x" style="padding: 10px;"></i></a>
+                    <a href="https://twitter.com/podnesia?s=09"><i class="fab fa-twitter fa-2x" style="padding: 10px;"></i></a>
 
                 </div>
             </div>
-
-
-
         </nav>
 
 
@@ -87,15 +84,6 @@
             <?= $this->renderSection('content'); ?>
 
         </div>
-
-
-
-
-
-
-
-
-
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
