@@ -107,7 +107,7 @@ class Login extends BaseController
                 'accToken' => $accessToken,
                 'refreshToken' => $refreshToken,
             ]);
-
+            $_SESSION['id'] = $me->id;
             $_SESSION['name'] = $me->display_name;
             header('Location: ' . base_url('dashboard'));
             die();

@@ -31,9 +31,9 @@ class Search extends BaseController
         ];
 
         $user = $userModel->asObject()->find($this->session->id);
-        #dd($user);
-        $session->setAccessToken($user[0]->accToken);
-        $session->setRefreshToken($user[0]->refreshToken);
+        // dd($this->session->id);
+        $session->setAccessToken($user->accToken);
+        $session->setRefreshToken($user->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
         $api->setSession($session);
         $data_search = $api->search($search, 'show', ['limit' => 10]);
@@ -64,8 +64,8 @@ class Search extends BaseController
             'auto_refresh' => true,
         ];
         $user  = $userModel->asObject()->find($this->session->id);
-        $session->setAccessToken($user[0]->accToken);
-        $session->setRefreshToken($user[0]->refreshToken);
+        $session->setAccessToken($user->accToken);
+        $session->setRefreshToken($user->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
 
         $page = 1;
@@ -111,8 +111,8 @@ class Search extends BaseController
             'auto_refresh' => true,
         ];
         $user = $userModel->asObject()->find($this->session->id);
-        $session->setAccessToken($user[0]->accToken);
-        $session->setRefreshToken($user[0]->refreshToken);
+        $session->setAccessToken($user->accToken);
+        $session->setRefreshToken($user->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
 
         $newAccessToken = $session->getAccessToken();
@@ -144,8 +144,8 @@ class Search extends BaseController
         ];
         $user = $userModel->asObject()->find($this->session->id);
         // dd($user);
-        $session->setAccessToken($user[0]->accToken);
-        $session->setRefreshToken($user[0]->refreshToken);
+        $session->setAccessToken($user->accToken);
+        $session->setRefreshToken($user->refreshToken);
         $api = new SpotifyWebAPI\SpotifyWebAPI($options, $session);
 
         $newAccessToken = $session->getAccessToken();
