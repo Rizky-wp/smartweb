@@ -14,7 +14,7 @@
             <input type="hidden" id="id_pod" value="<?= $data_episode->show->id; ?>">
             <input type="hidden" id="id_episode" value="<?= $data_episode->id; ?>">
             <input type="hidden" id="id_user" value="<?= $me->id; ?>">
-            <input type="comment" class="form-control input-comment mt-2  " id="comment">
+            <input type="comment" class="form-control input-comment mt-2  " id="comment" placeholder="Isi Komentar">
         </div>
     </div>
     <button type="submit" class="btn btn-dark btncomment mt-2" onclick="submit_click()">Submit</button>

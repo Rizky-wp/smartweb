@@ -11,9 +11,12 @@ function load_click(){
             success: function(data){
                 
                 data = JSON.parse(data)
+                if(data.data.items.length == 0){
+                    $('#more').addClass("visually-hidden")
+                };
                 $('#page').val(data.page)
                 let html = ''
-                // console.log(data.data)
+                console.log(data.data)
                 data.data.items.map(episode => {
                     html+='<div class="list-group episode">'
                     html+='<a href="'+site_url+'/search/episode/'+episode.id+'" class="list-group-item list-group-item-action">'

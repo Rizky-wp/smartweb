@@ -16,7 +16,18 @@ function submit_click(){
                 data = JSON.parse(data)
 
                 console.log(data.data)
-                $('#comment').val(' ');
+                
+                if (data.data == "oke"){
+                    alert("Komentar Berhasil Ditambahkan");
+                    $('#comment').val('');
+                    $('#comment').attr("placeholder", "Isi Komentar");
+                }
+                else if(data.data == "gagal"){
+                    alert("Komentar Gagal Ditambahkan");
+                    $('#comment').val('');
+                    $('#comment').attr("placeholder", "Isi Komentar");
+                }
+                
             }
           });
     }

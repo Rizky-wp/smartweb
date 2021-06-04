@@ -48,7 +48,7 @@
         </div>
     <?php endforeach; ?>
     <div id="tambah" class="mt-2">
-        <button type="button " class="btn btn-secondary" onclick="load_click()">Show More</button>
+        <button id="more" type="button " class="btn btn-secondary" onclick="load_click()">Show More</button>
     </div>
     <br>
     <?= $this->endSection(); ?>
